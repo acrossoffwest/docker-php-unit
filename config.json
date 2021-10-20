@@ -1,0 +1,24 @@
+{
+  "listeners": {
+    "0.0.0.0:9000": {
+      "application": "laravel_app"
+    }
+  },
+  "applications": {
+    "laravel_app": {
+      "type": "php",
+      "processes": 2,
+      "root": "/var/www/html/public",
+      "index": "index.php",
+      "script": "index.php",
+      "environment": {
+        "TIMEZONE": "Europe/Moscow",
+        "APP_ENV": "prod",
+        "APP_TYPE": "nginx-unit"
+      },
+      "options": {
+        "file": "/usr/local/etc/php/php.ini"
+      }
+    }
+  }
+}

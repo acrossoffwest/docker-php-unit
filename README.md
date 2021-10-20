@@ -1,4 +1,4 @@
-# Docker PHP FPM image based on Alpine 3.13
+# Docker PHP Unit image based on Alpine 3.13
 
 Base docker image: php:8.0.11-fpm-alpine3.13
 
