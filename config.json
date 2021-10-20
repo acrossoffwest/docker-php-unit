@@ -1,24 +1,32 @@
 {
   "listeners": {
     "0.0.0.0:9000": {
-      "application": "laravel_app"
+      "pass": "routes"
     }
   },
-  "applications": {
-    "laravel_app": {
-      "type": "php",
-      "processes": 2,
-      "root": "/var/www/html/public",
-      "index": "index.php",
-      "script": "index.php",
-      "environment": {
-        "TIMEZONE": "Europe/Moscow",
-        "APP_ENV": "prod",
-        "APP_TYPE": "nginx-unit"
+
+  "routes": [
+    {
+      "match": {
+        "uri": "!/index.php"
       },
-      "options": {
-        "file": "/usr/local/etc/php/php.ini"
+      "action": {
+        "share": "/var/www/html/public/",
+        "fallback": {
+          "pass": "applications/laravel"
+        }
       }
+    }
+  ],
+
+  "applications": {
+    "laravel": {
+      "type": "php",
+      "processes": 4,
+      "user": "www-data",
+      "group": "www-data",
+      "root": "/var/www/html/public/",
+      "script": "index.php"
     }
   }
 }
