@@ -8,7 +8,7 @@ Base docker image: php:8.0.11-fpm-alpine3.13
 - Composer
 - Basic necessary extensions of PHP
   
-    pdo, pdo_pgsql, pgsql, pdo_mysql, mysqli, gd, exif, zip, opcache, xmlreader, redis, mbstring, intl
+    pdo, pdo_pgsql, pgsql, pdo_mysql, mysqli, gd, exif, zip, opcache, xmlreader, redis
 - Nginx
 - Supervisor
 - Cron

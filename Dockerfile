@@ -28,7 +28,7 @@ RUN install-php-extensions pdo pdo_pgsql pgsql pdo_mysql mysqli
 RUN install-php-extensions imagick gd exif
 
 # Other
-RUN install-php-extensions zip unzip opcache xmlreader redis mbstring intl
+RUN install-php-extensions zip unzip opcache xmlreader redis
 
 # Composer
 
